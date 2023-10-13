@@ -1,0 +1,26 @@
+<div class="bootstrap-wrapper ml20 mr20">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <mat-card class="grid-cardbat mt10" *ngFor="let team of teams">
+                <div class="grid-itembat">
+                    <b routerLink="/my-team-info">{{team}}</b>
+                </div>
+                <div class="grid-itembat">
+                    Matches : 0
+                </div>
+                <div class="grid-itembat">
+                    Won : 0
+                </div>
+                <div class="grid-itembat">
+                    Lost : 0
+                </div>
+                <div class="grid-itembat">
+                    <mat-icon (click)="updateTeam()">edit</mat-icon>
+                </div>
+                <div class="grid-itembat">
+                    <mat-icon>delete</mat-icon>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.grid-cardbat {
+    display: grid;
+    grid-template-columns: 28% repeat(5, 1fr); /* 6 columns of equal width */
+    /*grid-template-rows: repeat(3, 1fr);     3 rows of equal height */
+    
+  }
+  
+  .grid-itembat {
+    /* Styling for individual grid items */
+    border: 1px solid #fff;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+   
+  }

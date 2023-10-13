@@ -1,0 +1,37 @@
+<div class="bootstrap-wrapper ml10 mr10">
+    <div class="container">
+        <div class="row">
+            <div class="col" *ngFor="let c of [1,2,3,4,5,6,7,8]">
+                <mat-card class="card-grid mt10 mb10">
+                    <mat-card-header>
+                      <mat-card-title>Chennai Super Kings vs Royal Challangers Banglore</mat-card-title>
+                      <mat-card-subtitle class="subtitle">Chennai Super Kings won by 10 runs</mat-card-subtitle>
+                      <mat-card-subtitle class="subtitle1">02/10/2023</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <mat-card class="grid-cardbat">
+                            <div class="grid-itembat">
+                                Chennai Super Kings
+                            </div>
+                            <div class="grid-itembat">
+                                150/7
+                            </div>
+                        </mat-card>
+                        <mat-card class="grid-cardbat" >
+                            <div class="grid-itembat">
+                                Royal Challangers Banglore
+                            </div>
+                            <div class="grid-itembat">
+                                140/7
+                            </div>
+                        </mat-card>
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <button mat-button color="warn">Live</button>
+                      <button mat-button color="primary" class="ml20">Scorecard</button>
+                    </mat-card-actions>
+                  </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
