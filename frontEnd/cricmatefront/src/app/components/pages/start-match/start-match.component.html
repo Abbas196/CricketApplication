@@ -1,0 +1,59 @@
+<div class="bootstrap-wrapper mr20 ml20">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <h3>Teams</h3>
+                <div >
+                    <form class="example-form">
+                        <!-- Team 1 Input -->
+                        <mat-form-field class="example-full-width">
+                          <input matInput placeholder="Ex. Team 1" [formControl]="team1Control" [matAutocomplete]="auto1">
+                          <mat-autocomplete #auto1="matAutocomplete">
+                            <mat-option *ngFor="let option of filteredOptions1 | async" [value]="option">
+                              {{ option }}
+                            </mat-option>
+                          </mat-autocomplete>
+                        </mat-form-field>
+                      
+                        <!-- Team 2 Input -->
+                        <mat-form-field class="example-full-width">
+                          <input matInput placeholder="Ex. Team 2" [formControl]="team2Control" [matAutocomplete]="auto2">
+                          <mat-autocomplete #auto2="matAutocomplete">
+                            <mat-option *ngFor="let option of filteredOptions2 | async" [value]="option">
+                              {{ option }}
+                            </mat-option>
+                          </mat-autocomplete>
+                        </mat-form-field>
+                      </form>
+                      
+                </div>
+            <h3>Toss Won by?</h3>
+            <mat-card class="grid-cardbat">
+                    <div class="grid-itembat">
+                        <mat-radio-button value="1">Team 1</mat-radio-button>
+                    </div>
+                    <div class="grid-itembat">
+                        <mat-radio-button value="2">Team 2</mat-radio-button>
+                    </div>
+            </mat-card>
+            <h3>Opted to?</h3>
+            <mat-card class="grid-cardbat">
+                <div class="grid-itembat">
+                    <mat-radio-button value="1">Batting</mat-radio-button>
+                </div>
+                <div class="grid-itembat">
+                    <mat-radio-button value="2">Bowling</mat-radio-button>
+                </div>
+            </mat-card>
+            <h3>Overs?</h3>
+                <div >
+                    <form class="example-form">
+                        <mat-form-field class="example-full-width">
+                          <input matInput placeholder=" Ex.20 or ?">
+                        </mat-form-field>
+                    </form>
+                </div>
+
+                <button mat-raised-button routerLink="/select-opening">Start Match</button>
+        </div>
+    </div>
+</div>

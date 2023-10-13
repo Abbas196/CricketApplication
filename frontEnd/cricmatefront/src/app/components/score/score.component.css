@@ -1,0 +1,100 @@
+
+.grid-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+    
+  }
+  
+  .grid-item {
+    /* Styling for the grid items */
+    border: 1px solid #fff;
+    padding: 5px;
+    font-weight: 500;
+  }
+  
+  .grid-cardbat {
+    display: grid;
+    grid-template-columns: 28% repeat(5, 1fr); /* 6 columns of equal width */
+    /*grid-template-rows: repeat(3, 1fr);     3 rows of equal height */
+    
+  }
+  
+  .grid-itembat {
+    /* Styling for individual grid items */
+    border: 1px solid #fff;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+   
+  }
+
+  .grid-cardbathead {
+    display: grid;
+    grid-template-columns: 28% repeat(5, 1fr); /* 6 columns of equal width */
+    grid-template-rows: repeat(2, 1fr);     /*3 rows of equal height */
+  }
+
+  .grid-itembat h5{
+    width: 100%;
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+    direction: ltr !important;
+    font-size: 16px;
+  }
+
+  .grid-cardover {
+    display: grid;
+    grid-template-columns: 27% 73%;
+}
+
+.grid-itemover {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* This allows the flex items to wrap onto the next line if needed */
+  /* Additional styles for the grid items, e.g., padding, borders, etc. */
+  padding: 10px;
+  font-size: 16px;
+}
+.grid-itemover > div {
+  flex: 0 0 10%; /* This makes every item inside the flex container grow equally */
+   /* Optional, if you want content centered inside each item */
+  justify-content: flex-start;
+  flex-direction: row;
+  overflow: visible;
+  max-width: 10%; /* Example width, adjust as needed */
+  font-size: 16px;
+}
+
+
+.circle-item {
+  display: flex;            /* Using Flexbox to center content */
+  justify-content: center;  /* Center content horizontally */
+  align-items: center;      /* Center content vertically */
+  
+  width: 40px;              /* Set the diameter of the circle */
+  height: 40px;             /* Height should match the width */
+  
+  border-radius: 50%;       /* Makes it a circle */
+  border: 2px solid #333;   /* Border color and width */
+  margin: 10px;             /* Optional spacing between items */
+}
+mat-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr)); /* Adjust the minmax value as per circle size and desired layout */
+  justify-content: center;
+  
+}
+
+.score{
+    padding: 20px;
+}
+
+
+
+
+
+
+
+  
