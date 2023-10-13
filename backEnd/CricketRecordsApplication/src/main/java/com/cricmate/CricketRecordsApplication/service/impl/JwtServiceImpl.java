@@ -20,7 +20,7 @@ import java.util.function.Function;
 
 @Service
 public class JwtServiceImpl implements jwtService {
-    @Value("{token.signing.key}")
+    @Value("${token.signing.key}")
     private String jwtSigningKey;
 
     @Override
@@ -61,7 +61,7 @@ public class JwtServiceImpl implements jwtService {
                 .getBody();
     }
     private Key getSigningKey(){
-        byte[] KeyBytes = Decoders.BASE64URL.decode(jwtSigningKey);
+        byte[] KeyBytes = Decoders.BASE64.decode(jwtSigningKey);
         return Keys.hmacShaKeyFor(KeyBytes);
     }
 }
