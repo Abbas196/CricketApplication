@@ -66,6 +66,7 @@ export class RegisterComponent {
         console.log('200');
       },
       (error) => {
+        console.log(error);
         this._snack.open("Something went wrong !", '', {
           duration: 3000
         })
