@@ -13,10 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/resource")
 @RequiredArgsConstructor
 public class AuthorizationController {
-    @Value("${server.port}")
-    private String serverPort;
     @GetMapping
-    @CrossOrigin(origins = "http://localhost:${server.port}")
     public ResponseEntity<String> sayHello() {
         return ResponseEntity.ok("Here is your resource");
     }

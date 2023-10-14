@@ -1,0 +1,169 @@
+<div class="bootstrap-wrapper">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 score">
+            <mat-card class="grid-card">
+                <div class="grid-item">
+                    T1,1st innings
+                </div>
+                <div class="grid-item">
+                    CRR
+                </div>
+                <div class="grid-item">
+                    <b>0 - 0 <sub>(0.0)</sub></b>
+                </div>
+                <div class="grid-item">
+                    0.00
+                </div>
+
+            </mat-card>
+            <mat-card class="grid-cardbat mt10">
+                <div class="grid-itembat">
+                    Batsman
+                </div>
+                <div class="grid-itembat">
+                    R
+                </div>
+                <div class="grid-itembat">
+                    B
+                </div>
+                <div class="grid-itembat">
+                    4s
+                </div>
+                <div class="grid-itembat">
+                    6s
+                </div>
+                <div class="grid-itembat">
+                    SR
+                </div>
+            </mat-card>
+            <mat-card class="grid-cardbathead">
+                <div class="grid-itembat">
+                    <h5>Sai Naga Surya Aditya <span class="star">*</span> </h5> 
+                </div>
+                <div class="grid-itembat">
+                    <h5>0</h5>
+                </div>
+                <div class="grid-itembat">
+                    <h5>0</h5>
+                </div>
+                <div class="grid-itembat">
+                    <h5>0</h5>
+                </div>
+                <div class="grid-itembat">
+                    <h5>0</h5>
+                </div>
+                <div class="grid-itembat">
+                    <h5>0.00</h5>
+                </div>
+                <div class="grid-itembat">
+                    <h5>Sai Naga Surya Aditya</h5>
+                </div>
+                <div class="grid-itembat">
+                    <h5>0</h5>
+                </div>
+                <div class="grid-itembat">
+                    <h5>0</h5>
+                </div>
+                <div class="grid-itembat">
+                    <h5>0</h5>
+                </div>
+                <div class="grid-itembat">
+                    <h5>0</h5>
+                </div>
+                <div class="grid-itembat">
+                    <h5>0.00</h5>
+                </div>
+            </mat-card>
+            <mat-card class="grid-cardbat mt10">
+                <div class="grid-itembat">
+                    Bowler
+                </div>
+                <div class="grid-itembat">
+                    O
+                </div>
+                <div class="grid-itembat">
+                    M
+                </div>
+                <div class="grid-itembat">
+                    R
+                </div>
+                <div class="grid-itembat">
+                    W
+                </div>
+                <div class="grid-itembat">
+                    ER
+                </div>
+            </mat-card>
+            <mat-card class="grid-cardbat">
+                <div class="grid-itembat">
+                    <h5>Sai Naga Surya Aditya</h5>
+                </div>
+                <div class="grid-itembat">
+                    <h5>0</h5>
+                </div>
+                <div class="grid-itembat">
+                    <h5>0</h5>
+                </div>
+                <div class="grid-itembat">
+                    <h5>0</h5>
+                </div>
+                <div class="grid-itembat">
+                    <h5>0</h5>
+                </div>
+                <div class="grid-itembat">
+                    <h5>0.00</h5>
+                </div>
+            </mat-card>
+            <mat-card class="grid-cardover mt10">
+                <div class="grid-itemover">
+                    <b>This Over:</b>
+                </div>
+                <div class="grid-itemover" >
+                    <div  *ngFor="let overScore of overScores"><b>{{overScore}}</b></div>  
+                    
+                </div>
+            </mat-card>
+            <mat-card class="mt10">
+                <div class="grid-itemover">
+                    <section class="example-section" [formGroup]="extras">
+                        <div>
+                        <mat-checkbox formControlName="wide" >Wide</mat-checkbox>
+                        <mat-checkbox formControlName="noball">No Ball</mat-checkbox>
+                        <mat-checkbox formControlName="byes">Byes</mat-checkbox>
+                        <mat-checkbox formControlName="legbyes">Leg Byes</mat-checkbox>
+                        <mat-checkbox formControlName="wicket">Wicket</mat-checkbox>
+                    </div>
+                    </section>
+                </div>
+            </mat-card>
+            {{extras.value | json}}
+            {{extras.value.wide}}
+            <mat-card class="mt10">
+                <div class="circle-item" *ngFor="let score of scores">
+                    <a (click)="Score(score)">
+                        {{score}}
+                    </a>
+                </div>
+            </mat-card>
+            
+            <mat-card class="mt10">
+                <button mat-raised-button>RETIRE</button>
+                <button mat-raised-button class="ml10">SWAP BATSMAN</button>
+            </mat-card>
+            <mat-card class="mt10">
+                <button mat-raised-button>UNDO</button>
+                <button mat-raised-button class="ml10">WICKET</button>
+            </mat-card>
+            <mat-card class="mt10">
+                <button mat-raised-button>SELECT BATSMAN</button>
+                <button mat-raised-button class="ml10">SELECT BOWLER</button>
+            </mat-card>
+            <mat-card class="mt10">
+                <button mat-raised-button>END SCORING</button>
+                <button mat-raised-button class="ml10">START SECOND INNINGS</button>
+            </mat-card>
+            
+            
+        </div>
+    </div>
+</div>

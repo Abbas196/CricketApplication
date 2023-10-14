@@ -1,0 +1,29 @@
+.grid-cardbat {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 6 columns of equal width */
+    /*grid-template-rows: repeat(3, 1fr);     3 rows of equal height */
+    
+  }
+  
+  .grid-itembat {
+    /* Styling for individual grid items */
+    border: 1px solid #fff;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+   
+  }
+
+  .example-form {
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+    
+  }
+h3{
+  margin: 5px;
+  font-size: 16px;
+}
