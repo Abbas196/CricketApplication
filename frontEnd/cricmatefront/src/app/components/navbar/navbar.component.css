@@ -1,0 +1,22 @@
+mat-sidenav-container{
+    height: calc(205vh - 114vh);
+    
+}
+
+mat-sidenav{
+width: 200px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;  /* Adjust if needed to ensure it's above other content */
+    box-shadow: none;
+    background-color: rgba(231, 230, 228, 0.808);
+  }
+  
+  

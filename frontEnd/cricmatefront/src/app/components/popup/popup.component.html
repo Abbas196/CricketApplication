@@ -1,0 +1,34 @@
+<form [formGroup]="myform" (ngSubmit)="saveUser()" *ngIf="data.formType === 'scoreForm'">
+    <h1 mat-dialog-title>{{inputData.title}} </h1>
+    <div mat-dialog-content>
+        <mat-form-field class="example-full-width">
+            <mat-label>Scored runs(including overthrows)?</mat-label>
+            <input formControlName="runsScored" matInput>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Penalty runs?</mat-label>
+            <input formControlName="penaltyRuns" matInput>
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button (click)="closePopup()" mat-raised-button>Close</button>
+        <button mat-raised-button >Save</button>
+        <!-- <button mat-button  [mat-dialog-close]="closemessage">Cancel</button> -->
+    </div>
+    
+</form>
+
+<form [formGroup]="createteamform" (ngSubmit)="saveUser()"*ngIf="data.formType === 'teamForm'">
+    <h1 mat-dialog-title>{{inputData.title}} </h1>
+    <div mat-dialog-content>
+        <mat-form-field class="example-full-width">
+            <mat-label>Enter the Team name</mat-label>
+            <input formControlName="teamName" matInput>
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button (click)="closePopup()" mat-raised-button>Close</button>
+        <button mat-raised-button >Save</button>
+        <!-- <button mat-button  [mat-dialog-close]="closemessage">Cancel</button> -->
+    </div>
+</form>

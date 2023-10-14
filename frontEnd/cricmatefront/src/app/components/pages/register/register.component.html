@@ -1,0 +1,87 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <mat-card style="padding: 15px;">
+                    <div class="container text-center">
+                        <img src="../../../assets/logo.jpg" alt="" style="width: 120px; height: 120px;" />
+                    </div>
+                    <h1 class="text-center">Register Here !!</h1>
+                    <form [formGroup]="regForm" (submit)="register()">
+                        <!-- <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Username</mat-label>
+                            <input class="form-control" name="username" matInput placeholder="Enter here"
+                                formControlName="username" [ngClass]="{'is-invalid':isSubmit && f.username.errors}">
+                            <mat-hint>Hint : Username must be unique!!</mat-hint>
+                        </mat-form-field>
+                        <p class="text-danger fw-bold" *ngIf="isSubmit && f.username.errors">Please enter username</p> -->
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input class="form-control" name="email" type="email" matInput placeholder="Enter here"
+                                required formControlName="email" [ngClass]="{'is-invalid':isSubmit && f.email.errors}">
+                        </mat-form-field>
+                        <p class="text-danger fw-bold" *ngIf="isSubmit && f.email.errors">Please enter email</p>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input class="form-control" name="password" type="password" matInput
+                                placeholder="Enter here" required formControlName="password" [ngClass]="{'is-invalid':isSubmit && f.password.errors}">
+                        </mat-form-field>
+                        <p class="text-danger fw-bold" *ngIf="isSubmit && f.password.errors">Please enter password</p>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>First Name</mat-label>
+                            <input class="form-control" name="firstName" matInput placeholder="Enter here"
+                                required formControlName="firstName" [ngClass]="{'is-invalid':isSubmit && f.firstName.errors}">
+                        </mat-form-field>
+                        <p class="text-danger fw-bold" *ngIf="isSubmit && f.firstName.errors">Please enter firstName</p>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Last Name</mat-label>
+                            <input class="form-control" name="lastName" matInput placeholder="Enter here"
+                                required formControlName="lastName" [ngClass]="{'is-invalid':isSubmit && f.lastName.errors}">
+                        </mat-form-field>
+                        <p class="text-danger fw-bold" *ngIf="isSubmit && f.lastName.errors">Please enter lastName</p>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Phone Number</mat-label>
+                            <input class="form-control" name="phone" type="number" matInput placeholder="Enter here"
+                                required formControlName="phoneNumber" [ngClass]="{'is-invalid':isSubmit && f.phoneNumber.errors}">
+                        </mat-form-field>
+                        <p class="text-danger fw-bold" *ngIf="isSubmit && f.phoneNumber.errors">Please enter phone number</p>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Playing Role</mat-label>
+                            <mat-select formControlName="playingRole">
+                              <mat-option *ngFor="let role of playingRoles" [value]="role.value">
+                                {{role.viewValue}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                          <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Batting Style</mat-label>
+                            <mat-select formControlName="battingStyle">
+                              <mat-option *ngFor="let role of battingStyles" [value]="role.value">
+                                {{role.viewValue}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                          <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Bowling Style</mat-label>
+                            <mat-select formControlName="bowlingStyle">
+                              <mat-option *ngFor="let role of bowlingStyles" [value]="role.value">
+                                {{role.viewValue}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+
+                        <div class="container text-center">
+                            <button type="submit" mat-raised-button color="primary" [disabled]="regForm.invalid">Register</button>
+                            <button style="margin-left: 20px;" mat-raised-button color="accent" (click)="reset()">Clear</button>
+                        </div>
+                    </form>
+                </mat-card>
+                </div>
+            
+        </div>
+    </div>
+</div>

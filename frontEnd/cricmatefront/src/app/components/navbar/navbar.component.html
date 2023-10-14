@@ -1,0 +1,37 @@
+<mat-toolbar class="mat-elevation-z8">
+  <mat-toolbar-row>
+    <button mat-button routerLink="">
+      <h3>CRICMATE</h3>
+    </button>
+    <button mat-button (click)="opened=!opened">
+      <mat-icon *ngIf="opened==false">menu</mat-icon>
+      <mat-icon *ngIf="opened==true">close</mat-icon>
+    </button>
+    <span class="example-spacer"></span>
+    <button mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" routerLink="/login">
+      Login
+    </button>
+    <button mat-button class="example-icon" aria-label="Example icon-button with share icon" routerLink="/signup">
+      Register
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav [(opened)]="opened" mode="over" class="mat-elevation-z8">
+    <mat-list role="list">
+      <mat-list-item role="listitem" routerLink="">Home</mat-list-item>
+      <mat-list-item role="listitem" routerLink="/login">Login</mat-list-item>
+      <mat-list-item role="listitem" routerLink="/signup">Register</mat-list-item>
+      <mat-list-item role="listitem" routerLink="/score">Score</mat-list-item>
+      <mat-list-item role="listitem" (click)="createTeam()">Create Team</mat-list-item>
+      <mat-list-item role="listitem" routerLink="/my-teams">My Teams</mat-list-item>
+      <mat-list-item role="listitem" routerLink="/start-match">Start Match</mat-list-item>
+    </mat-list>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mt10">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
