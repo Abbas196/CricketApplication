@@ -31,6 +31,9 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { SelectOpeningComponent } from './components/pages/select-opening/select-opening.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
+import { StatsComponent } from './components/stats/stats.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { DynamicStatsComponent } from './components/dynamic-stats/dynamic-stats.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +48,8 @@ import { HttpClientModule } from '@angular/common/http';
     MyTeamInfoComponent,
     StartMatchComponent,
     SelectOpeningComponent,
+    StatsComponent,
+    DynamicStatsComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +72,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatSelectModule,
     MatAutocompleteModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

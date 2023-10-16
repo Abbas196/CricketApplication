@@ -1,0 +1,26 @@
+<div class="grid-container">
+    <ng-container *ngIf="data==='Batting Data'">
+        <mat-card *ngFor="let item of gridData" class="grid-item">
+            <div class="content">
+                <p>{{item}}</p>
+                <p><b>5</b></p>
+            </div>
+        </mat-card>
+    </ng-container>
+    <ng-container *ngIf="data==='Bowling Data'">
+        <mat-card *ngFor="let item of bowlingData" class="grid-item">
+            <div class="content">
+                <p>{{item}}</p>
+                <p><b>5</b></p>
+            </div>
+        </mat-card>
+    </ng-container>
+    <ng-container *ngIf="data==='Fielding Data'">
+        <mat-card *ngFor="let item of fieldingData" class="grid-item">
+            <div class="content">
+                <p>{{item}}</p>
+                <p><b>5</b></p>
+            </div>
+        </mat-card>
+    </ng-container>
+</div>
