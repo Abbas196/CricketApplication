@@ -30,6 +30,16 @@ public class User implements UserDetails {
     private String email;
     private String password;
 
+    private String Gender;
+
+    private String phoneNumber;
+
+    private String PlayingRole;
+    private String BattingStyle;
+    private  String BowlingStyle;
+
+
+
     @Enumerated(EnumType.ORDINAL)
     private Access accessType;
 

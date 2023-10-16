@@ -14,4 +14,12 @@ public class SignUpRequest {
     private String lastName;
     private String email;
     private String password;
+
+    private String PlayingRole;
+    private String BattingStyle;
+    private  String BowlingStyle;
+
+    private String Gender;
+
+    private String phoneNumber;
 }
