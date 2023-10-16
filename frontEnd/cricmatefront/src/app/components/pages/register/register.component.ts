@@ -54,21 +54,24 @@ export class RegisterComponent {
 
   register() {
     this.isSubmit = true;
-    console.log(this.regForm.value);
     if (this.regForm.value.email == '' || this.regForm.value.email == null) {
-      this._snack.open("Email is required !!", '', {
+      this._snack.open("Email is required !!", 'close', {
         duration: 3000
       })
       return;
     }
     this._signup.addUser(this.regForm.value).subscribe(
       (data) => {
-        console.log('200');
+        console.log(data);
+        this._snack.open("Successfully Registered !", 'close', {
+          duration: 3000,
+          
+        })
       },
       (error) => {
         console.log(error);
-        this._snack.open("Something went wrong !", '', {
-          duration: 3000
+        this._snack.open("Something went wrong !", 'close', {
+          duration: 3000,
         })
       }
     )
