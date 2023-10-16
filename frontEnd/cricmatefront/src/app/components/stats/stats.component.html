@@ -1,0 +1,16 @@
+<div class="profile">
+    <img src="../../../assets/profile.png" alt="profile">
+    <h3>Sai Naga Surya Aditya Desineedi</h3>
+</div>
+  
+<mat-tab-group>
+    <mat-tab label="Batting">
+        <app-dynamic-stats [data]="'Batting Data'"></app-dynamic-stats>
+    </mat-tab>
+    <mat-tab label="Bowling">
+        <app-dynamic-stats [data]="'Bowling Data'"></app-dynamic-stats>
+    </mat-tab>
+    <mat-tab label="Fielding">
+        <app-dynamic-stats [data]="'Fielding Data'"></app-dynamic-stats>
+    </mat-tab>
+</mat-tab-group>

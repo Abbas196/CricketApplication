@@ -9,13 +9,19 @@
                     </div>
                     <h1 class="text-center">Login Here !!</h1>
                     <form [formGroup]="loginForm" (submit)="login()" #logForm="ngForm">
-                        <mat-form-field class="full-width" appearance="outline">
+                        <!-- <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Username</mat-label>
                             <input class="form-control" name="username" matInput placeholder="Enter here" formControlName="username" [ngClass]="{'is-invalid':isSubmit && f.username.errors}">
                             <mat-hint>Hint : Valid Username</mat-hint>
                             
                         </mat-form-field>
-                        <p class="text-danger fw-bold" *ngIf="isSubmit && f.username.errors">Please enter username</p>
+                        <p class="text-danger fw-bold" *ngIf="isSubmit && f.username.errors">Please enter username</p> -->
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input class="form-control" name="email" type="email" matInput placeholder="Enter here"
+                                required formControlName="email" [ngClass]="{'is-invalid':isSubmit && f.email.errors}">
+                        </mat-form-field>
+                        <p class="text-danger fw-bold" *ngIf="isSubmit && f.email.errors">Please enter email</p>
 
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Password</mat-label>

@@ -9,6 +9,7 @@ import { MyTeamsComponent } from './components/pages/my-teams/my-teams.component
 import { MyTeamInfoComponent } from './components/pages/my-team-info/my-team-info.component';
 import { StartMatchComponent } from './components/pages/start-match/start-match.component';
 import { SelectOpeningComponent } from './components/pages/select-opening/select-opening.component';
+import { StatsComponent } from './components/stats/stats.component';
 
 const routes: Routes = [
   {
@@ -49,6 +50,11 @@ const routes: Routes = [
   {
     path:'select-opening',
     component:SelectOpeningComponent,
+    pathMatch:'full',
+  },
+  {
+    path:'stats',
+    component:StatsComponent,
     pathMatch:'full',
   }
 ];
